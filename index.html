@@ -8,28 +8,38 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Rock Paper Scissors</h1>
-
-    <div>
-        <h2>Choose Your Weapon</h2>
-        <h4>First to score 5 points wins the game.</h4>
-        <p id = 'status'></p>
-    </div>
-    <div>
-        <div>
-            <!--image of rock, paper, or scissors-->
-            <h3 class = 'playerScore'>Player: </h3>
+    <main id = 'main-content'>
+        <h1 id = 'title'>Rock Paper Scissors</h1>
+        <h2 id = 'cyr'>Choose Your Weapon!</h2>
+        <div id = 'game-container'>
+            
+            <h4>First to score 5 points wins the game.</h4>
+            <div id = 'score-label'>
+                <p class = 'label'>you</p>
+                <p class = 'label'>computer</p>
+            </div>
+            <div id = 'score-container'>
+                <div id = 'players-score'>0</div>
+                <div id = 'computers-score'>0</div>
+            </div>
+            <div id = 'results-container'></div>
+            <div id = 'button-container'>
+                <div id = 'rock' class = 'button'>
+                    <!--insert img of rock-->
+                </div>
+                <div id = 'paper' class = 'button'>
+                    <!--insert img of paper-->
+                </div>
+                <div id = 'scissors' class = 'button'>
+                    <!--insert img of scissors-->
+                </div>
+            </div>
         </div>
-        <div>
-             <!--image of rock, paper, or scissors-->
-            <h3 class = 'computerScore'>Computer: </h3>
-        </div>
-        <div>
-            <button id = 'rock' value = false;>Rock</button>
-            <button id = 'paper' value = false;>Paper</button>
-            <button id = 'scissors' value = false;>Scissors</button>
-        </div>
+    </main>
+    <div id = 'end-alert'>
+        <div id = 'end-desc'></div>
+        <a id = 'retry-btn'></a>
     </div>
     <script src='myscript.js'></script>
 </body>
-</html>
+</html> 

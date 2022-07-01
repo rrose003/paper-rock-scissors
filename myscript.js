@@ -54,3 +54,10 @@ if (playerChoice == computerResponse) {
 }
 */
 
+let computerSelection;
+let playerSelection;
+let computerScore = 0;
+let playerScore = 0;
+
+let buttons = document.querySelectorAll('button');
+
