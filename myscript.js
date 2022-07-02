@@ -59,7 +59,13 @@ let playerSelection;
 let computerScore = 0;
 let playerScore = 0;
 
-let buttons = document.querySelectorAll('button');
+let buttons = document.querySelectorAll('.button');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const endAlert = document.querySelector('#end-alert');
+const endDesc = document.querySelector('#end-desc');
+const returnMainButton = document.querySelector('#retry-button');
+const container = document.querySelector('#results-container');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () =>{
@@ -72,4 +78,77 @@ buttons.forEach((button) => {
         }
     });
 });
-console.log(playerSelection);
+
+const weaponsArray =  ['Rock', 'Paper', 'Scissors'];
+
+function computerPlay() {
+    return weaponsArray[~~(Math.random() * weaponsArray.length)];
+}
+
+function playRound(playerSelection, computerSelection) {
+    computerSelection = computerPlay().toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
+    
+    if (playerSelection == computerSelection) {
+        displayResults('It\'s a tie!');
+    } else if ((computerSelection == 'rock' && playerSelection == 'scissors') || 
+              (computerSelection == 'paper' && playerSelection == 'rock') ||
+                (computerSelection == 'scissors' && playerSelection == 'paper')) {
+                    computerScore = ++computerScore;
+                    keepComputerScore();
+                    if (computerScore === 1|| computerScore === 2 || computerScore === 3 || computerScore === 4) {
+                        displayResults(`Oh no, you lost! ${capitalize(computerSelection)} beats ${playerSelection}.`);
+                    } else {
+                        playerScore = ++playerScore;
+                        keepPlayerScore();
+                        if (playerScore === 1) {
+                            displayResults(`Good job, you won! ${capitalize(playerSelection)} beat ${computerSelection}.`);
+                        } else {
+                            displayResults(`${capitalize(playerSelection)} beats ${computerSelection}.`);
+                        }
+                    }
+                }
+                
+}
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function displayResults(string) {
+    container.textContent = string;
+}
+
+function declareWinner() {
+    rplContent();
+    if (playerScore > computerScore) {
+        endDesc.textContent = 'Congratulations! You win!';
+        returnMainButton.innerText = 'Play Again';
+    } else {
+        endDesc.textContent = 'Sorry, you lost!';
+        returnMainButton.innerText = 'Try Again?';
+    }
+}
+
+function rplContent() {
+    returnMainButton.addEventListener('click', () => {
+        resetGame();
+    });
+}
+
+function resetGame() {
+    container.textContent = '';
+    playerScore = 0;
+    computerScore =  0;
+    keepPlayerScore();
+    keepComputerScore();
+}
+
+function keepPlayerScore() {
+    let playerScoreBox = document.querySelector('#player-score');
+    playerScoreBox.textContent = playerScore;
+}
+
+function keepComputerScore() {
+    let computerScoreBox = document.querySelector('#computer-score');
+    computerScoreBox.textContent = computerScore;
+}

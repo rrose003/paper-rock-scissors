@@ -4,3 +4,12 @@ body {
     color: #000;
     font-family: 'Titan One', cursive, sans-serif;
 }
+#title, 
+#cyr, 
+#game-container,
+#score-label, 
+#score-container,
+#end-desc {
+    text-align: center;
+}
+
