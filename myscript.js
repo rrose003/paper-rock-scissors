@@ -58,6 +58,7 @@ let computerSelection;
 let playerSelection;
 let computerScore = 0;
 let playerScore = 0;
+//let computerChoice = '';
 
 let buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
@@ -83,11 +84,22 @@ const weaponsArray =  ['Rock', 'Paper', 'Scissors'];
 
 function computerPlay() {
     return weaponsArray[~~(Math.random() * weaponsArray.length)];
+   /* const randomNumber = Math.floor(Math.random() * 3) +1;
+    console.log(randomNumber);
+    if (randomNumber === 1) {
+        computerChoice = 'rock';
+    } else if (randomNumber === 2) {
+        computerChoice = 'paper';
+    } else if (randomNumber === 3) {
+        computerChoice = 'scissors';
+    } */
 }
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = computerPlay().toLowerCase();
+    console.log(computerSelection);
     playerSelection = playerSelection.toLowerCase();
+    console.log(playerSelection);
     
     if (playerSelection == computerSelection) {
         displayResults('It\'s a tie!');
@@ -144,11 +156,11 @@ function resetGame() {
 }
 
 function keepPlayerScore() {
-    let playerScoreBox = document.querySelector('#player-score');
+    let playerScoreBox = document.querySelector('#players-score');
     playerScoreBox.textContent = playerScore;
 }
 
 function keepComputerScore() {
-    let computerScoreBox = document.querySelector('#computer-score');
+    let computerScoreBox = document.querySelector('#computers-score');
     computerScoreBox.textContent = computerScore;
 }
