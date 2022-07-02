@@ -61,3 +61,15 @@ let playerScore = 0;
 
 let buttons = document.querySelectorAll('button');
 
+buttons.forEach((button) => {
+    button.addEventListener('click', () =>{
+        const img = button.querySelector('img');
+        playerSelection = img.alt.toLowerCase();
+
+        playRound(playerSelection, computerSelection);
+        if (playerScore === 5 || computerScore === 5) {
+            declareWinner();
+        }
+    });
+});
+console.log(playerSelection);
