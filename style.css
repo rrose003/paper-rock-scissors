@@ -5,4 +5,13 @@ body {
     font-size: 16px;
 }
 
+.main {
+    background-color: white;
+}
+
+.header {
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-bottom: 2px solid;
+}
 
