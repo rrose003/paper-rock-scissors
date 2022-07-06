@@ -4,48 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <title>Rock Paper Scissors</title>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css"></script>
+    <script language="javascript" type="text/javascript" src="myscript.js"></script>
 </head>
-<body>
-    <main id = 'main-content'>
-        <h1 id = 'title'>Rock Paper Scissors</h1>
-        <h2 id = 'cyr'>Choose Your Weapon!</h2>
-        <div id = 'game-container'>
-            
-            <h4>First to score 5 points wins the game.</h4>
-            <div id = 'score-label'>
-                <p class = 'label'>you</p>
-                <p class = 'label'>computer</p>
-            </div>
-            <div id = 'score-container'>
-                <div id = 'players-score'>0</div>
-                <div id = 'computers-score'>0</div>
-            </div>
-            <div id = 'results-container'></div>
-            <div id = 'button-container'>
-                <div id = 'rock' class = 'button'>
-                    <!--insert img of rock-->
-                    <img src = 'https://cdn.pixabay.com/photo/2014/12/22/00/03/rock-576668__480.png' width = 200; alt = 'Rock'/>
-                </div>
-                <div id = 'paper' class = 'button'>
-                    <!--insert img of paper-->
-                    <img src = 'https://cdn.pixabay.com/photo/2012/04/13/13/18/paper-32377__480.png' height = 200; alt = 'Paper'/>
-                </div>
-                <div id = 'scissors' class = 'button'>
-                    <!--insert img of scissors-->
-                    <img src = 'https://cdn.pixabay.com/photo/2012/04/26/18/43/scissors-42801__480.png' width = 200; alt = 'Scissors'/>
-                </div>
+    
+    <header class="header">
+        <div class="container">
+            <h1>
+              <span class="rock">rock</span>
+              <span class="paper">paper</span>
+              <span class="scissors">scissors</span>
+            </h1>
+        </div>
+    </header>
+    
+    <body>
+        <div class="main">
+            <div class="container">
+                <section class="content">
+                    <button class="play rock" type="button" onclick="play('rock')"></button>
+                    <button class="play paper" type="button" onclick="play('paper')"></button>
+                    <button class="play scissors" type="button" onclick="play('scissors')"></button>
+                    <div style="clear:both;"></div>
+                    <p><span id="player"></span> <span id="opponent"></span></p>
+                    <h2 id="results"></h2>
+                </section>
+                <aside class="aside">
+                    <div class="scorebox">
+                        <h2>Score</h2>
+                        <div class="score-num"><span id="wins">0</span> <br />wins</div>
+                        <div class="score-divider"><span>-</span></div>
+                        <div class="score-num"><span id="losses">0</span> <br />losses</div>
+                    </div>
+                    <button type="reset" id="reset" onclick="reset()">reset scores</button>
+                </aside>
             </div>
         </div>
-    </main>
-    <div id = 'end-alert'>
-        <div id = 'end-desc'></div>
-        <a id = 'retry-button'></a>
-    </div>
-    <script src='myscript.js'></script>
-</body>
-</html> 
+    </body>
+</html>
