@@ -3,7 +3,7 @@ var wins = 0;
 
 const play = function(playerChoice) {
     document.getElementById('player').innerHTML = '';
-    document.getElementById('opponent').innerHTML = '';
+    document.getElementById('computer').innerHTML = '';
     document.getElementById('results').innerHTML = '';
 
     if (playerChoice === 'rock' || playerChoice === 'paper' || playerChoice === 'scissors') {
@@ -21,7 +21,7 @@ const play = function(playerChoice) {
     } else {
         computerChoice = 'scissors';
     }
-    document.getElementById('opponent').innerHTML = `// Your opponent chose ${computerChoice}.`;
+    document.getElementById('computer').innerHTML = `// The computer chose ${computerChoice}.`;
     
     var compare = function(choice1,choice2) {
         if (choice1 === choice2) {
@@ -67,7 +67,7 @@ var reset = function() {
     document.getElementById('losses').innerHTML = losses;
     document.getElementById('results').innerHTML = '';
     document.getElementById('player').innerHTML = '';
-    document.getElementById('opponent').innerHTML = '';
+    document.getElementById('computer').innerHTML = '';
 };
 
 
