@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: #c8cbca;
     color: #777;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
@@ -8,15 +8,15 @@ body {
 }
 
 .main {
-    background-color: white;
+    background-color: #c8cbca;
     width: 100%;
     min-height: 350px;
     padding-top: 80px;
 }
 
 .header {
-    background-color: #efefef;
-    border: 1px solid #efefef;
+    background-color: #eeefef;
+    border: 1px solid #eeefef;
     border-bottom: 2px solid;
     position: relative;
     width: 100%;
@@ -48,19 +48,19 @@ button.play {
 }
 
 button.play.rock {
-    background: #efefef url('https://cdn.pixabay.com/photo/2014/12/22/00/03/rock-576668__480.png') no-repeat;
+    background: #eeefef url('https://cdn.pixabay.com/photo/2014/12/22/00/03/rock-576668__480.png') no-repeat;
     background-size: 165px 165px;
     box-shadow: 2px 2px 2px #444;
 }
 
 button.play.paper {
-    background: #efefef url('https://cdn.pixabay.com/photo/2012/04/13/13/18/paper-32377__480.png') no-repeat;
+    background: #eeefef url('https://cdn.pixabay.com/photo/2012/04/13/13/18/paper-32377__480.png') no-repeat;
     background-size: 175px 175px;
     box-shadow: 2px 2px 2px #444;
 }
 
 button.play.scissors {
-    background: #efefef url('https://cdn.pixabay.com/photo/2012/04/26/18/43/scissors-42801__480.png') no-repeat;
+    background: #eeefef url('https://cdn.pixabay.com/photo/2012/04/26/18/43/scissors-42801__480.png') no-repeat;
     background-size: 165px 165px;
     box-shadow: 2px 2px 2px #444;
 }
@@ -71,7 +71,7 @@ button.play:hover {
 
 button#reset {
     color:#777;
-    background-color: gainsboro;
+    background-color: #eeefef;
     font-size: 14px;
     border-radius: 10px;
     width: 120px;
@@ -88,8 +88,8 @@ h2#results {
 
 .scorebox {
     border-radius: 10px;
-    background-color: #efefef;
-    border: 3px solid #efefef;
+    background-color: #eeefef;
+    border: 3px solid #eeefef;
     box-sizing: border-box;
     width: 195px;
     height: 175px;
