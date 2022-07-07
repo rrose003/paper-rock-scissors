@@ -75,12 +75,18 @@ h2#results {
     border-radius: 10px;
     background-color: #efefef;
     border: 3px solid #efefef;
+    box-sizing: border-box;
+    width: 195px;
+    height: 175px;
+    padding: 5px;
+    margin: 0 auto 15px auto;
 }
 
 .scorebox h2 {
     color:#777;
     font-weight: 600;
     font-size: 24px;
+    margin: 15px 0 10px 10px;
 }
 
 span#losses, 
@@ -114,5 +120,28 @@ html {
     margin: 0 auto;
     padding: 0;
     width: 960px;
+}
+
+.content {
+    width: 630px;
+    float: left;
+}
+
+.aside {
+    width: 330px;
+    float: right;
+}
+
+.score-divider,
+.score-num {
+    float: left;
+}
+
+.score-num {
+    width: 45%;
+}
+
+.score-divider {
+    width: 10%;
 }
 
