@@ -71,14 +71,15 @@ button.play:hover {
 
 button#reset {
     color:#777;
-    background-color: #eeefef;
+    background-color: #e3e5e4;
     font-size: 14px;
+    font-weight: 600;
     border-radius: 10px;
     width: 120px;
     height: 35px;
     float: right;
     margin-right: 105px;
-    border: 1;
+    
 }
 
 h2#results {
