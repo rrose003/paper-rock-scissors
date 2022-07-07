@@ -70,10 +70,10 @@ button.play:hover {
 }
 
 button#reset {
-    color:#777;
+    color:#444;
     background-color: #e3e5e4;
     font-size: 14px;
-    font-weight: 600;
+    /*font-weight: 600; */
     border-radius: 10px;
     width: 120px;
     height: 35px;
